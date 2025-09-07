@@ -1,0 +1,65 @@
+---
+---
+
+<div x-data="{ open: true }" class="fixed top-0 left-0 h-full">
+
+  <div x-show="!open" class="m-4 p-2 rounded-lg bg-white shadow-lg flex flex-row justify-center items-center">
+    <img src="/logo.svg" class="w-6 h-6 mx-2"/>
+    <button
+        @click="open = !open"
+        class="p-2 rounded-md  hover:bg-[#DAF8FF] flex flex-row justify-center items-center "
+        aria-label="toggle sidebar"
+    >
+        <p class="font-bold mr-2">acon's personal site</p>
+        <img src="/sidebar.svg" class="w-6 h-6"/>
+    </button>
+  </div>
+
+
+  <div
+    x-show="open"
+    class="bg-white shadow-lg w-64 py-4 h-full transition-all duration-300"
+    style="min-width: 300px;"
+  >
+
+    <div class="px-4">
+
+        <div class="flex items-center justify-between">
+            <img src="/logo.svg" class="w-6 h-6"/>
+            <button
+                @click="open = !open"
+                class="p-2 rounded-md flex flex-row justify-center items-center hover:bg-[#DAF8FF]"
+                aria-label="toggle sidebar"
+            >
+                <img src="/sidebar.svg" class="w-6 h-6"/>
+            </button>
+        </div>
+
+        <p class="font-bold">acon's personal site</p>
+        <p class="opacity-60 text-sm">work in progress!!</p>
+    </div>
+
+    <hr class="w-full border-t border-gray-300 my-4" />
+
+    <div class="px-4">
+        <p class="font-bold mb-2">pages</p>
+
+        <p><a href="#">about</a></p>
+        <p><a href="#">blog</a></p>
+
+
+    </div>
+
+    <hr class="w-full border-t border-gray-300 my-4" />
+
+    <div class="px-4">
+        <p class="font-bold mb-2">layers</p>
+
+        <p><a href="#">about</a></p>
+        <p><a href="#">things i've made</a></p>
+
+
+    </div>
+   
+  </div>
+</div>
