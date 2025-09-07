@@ -2,20 +2,13 @@
 
 body {
   background-color: #DAF8FF;
-  background-image: linear-gradient(to bottom, #DAF8FF 0%, #FEE8F1 100%);
-  background-repeat: no-repeat;
-  height: 100%;
-  min-height: 100vh;
+  background-image:
+    radial-gradient(circle, #80DCFD 1px, transparent 1.5px),
+    linear-gradient(to bottom, #DAF8FF 0%, #FEE8F1 100%);
+  background-size:
+    20px 20px,
+    100% 100%;
+  background-repeat:
+    repeat,
+    no-repeat;
 }
-
-.bg-dots {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: radial-gradient(circle, #80DCFD 1px, transparent 1.5px);
-  background-size: 20px 20px;
-  background-repeat: repeat;
-  z-index: -1;
-}
-
