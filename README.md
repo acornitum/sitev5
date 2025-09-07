@@ -1,4 +1,8 @@
-# Astro Starter Kit: Minimal
+# personal site: v5???
+
+this is still a work in progress!! 
+
+---
 
 ```sh
 npm create astro@latest -- --template minimal
