@@ -4,6 +4,11 @@ import "../styles/global.css";
 import Landing from "../components/Landing.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Footer  from "../components/Footer.astro";
+import Mobile from "../components/Mobile.astro";
+
+
+import DraggableLanding from "../components/about.jsx";
+import Things from "../components/things.jsx"
 
 
 ---
@@ -19,14 +24,32 @@ import Footer  from "../components/Footer.astro";
 		<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 	</head>
 	<body>
-		<Sidebar />
+		
+		<DraggableLanding client:load />
+            	<Things client:load />
 
-		<div class="flex flex-col justify-center items-center my-24">
-			<Landing />
+		<div class="md:hidden">
+			<Mobile />
+
 
 		</div>
 
-		<Footer />
+		<div class="hidden md:block">
+			<Sidebar />
+
+			<div class="flex justify-center items-center my-24">
+				<Landing />
+				
+			</div>
+
+			<p class="my-100">yeah this site is pretty scuffed</p>
+
+			<div class="bottom-0">
+				<Footer />
+			</div>
+			
+		</div>
+
 
 		
 
